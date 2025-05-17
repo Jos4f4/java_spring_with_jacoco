@@ -46,7 +46,7 @@ public class UserService implements UserDetailsService {
 		return user;
 	}
 	
-	protected User authenticated() {
+	public User authenticated() {
 		try {
 			String username = customUserUtil.getLoggedUsername();
 			return repository.findByEmail(username).get();
